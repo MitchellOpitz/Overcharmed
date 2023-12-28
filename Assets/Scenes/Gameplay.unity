@@ -229,8 +229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d388f606c015a24abf2a0950d513729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minClamp: {x: -5, y: -5}
-  maxClamp: {x: 5, y: 5}
+  minClamp: {x: -12.57, y: -7.71}
+  maxClamp: {x: 9.15, y: 7.91}
   showClampArea: 1
 --- !u!114 &519420034
 MonoBehaviour:
@@ -470,9 +470,72 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5301350449375937949, guid: 19b4a4ab77c5c01419796012d4828da1, type: 3}
   bulletForce: 20
   shootingRate: 3
+--- !u!1 &2030987307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2030987310}
+  - component: {fileID: 2030987309}
+  - component: {fileID: 2030987308}
+  m_Layer: 0
+  m_Name: Enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2030987308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030987307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee619c353ca1fa84aa84027119928a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTypes: 00000000
+--- !u!114 &2030987309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030987307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0802f64689a8a0348b0567e465fc2bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTypePropertiesList:
+  - enemyType: 0
+    enemyPrefab: {fileID: 7436306956284599162, guid: 19c7ea6d42988004da3ef2d3df266a63, type: 3}
+    baseSpawnRate: 0.25
+--- !u!4 &2030987310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030987307}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.244312, y: -1.5896056, z: -0.0057971347}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1799206701}
+  - {fileID: 2030987310}
