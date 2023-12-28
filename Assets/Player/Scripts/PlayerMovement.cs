@@ -5,25 +5,25 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 movement;
+    private PlayAreaClamp playAreaClamp;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playAreaClamp = FindAnyObjectByType<PlayAreaClamp>();
     }
 
     void Update()
     {
-        // Input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-
-        // Normalize the movement vector to ensure consistent speed in all directions
         movement.Normalize();
     }
 
     void FixedUpdate()
     {
-        // Movement
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        Vector2 newPosition = rb.position + movement * moveSpeed * Time.fixedDeltaTime;
+        newPosition = playAreaClamp.ClampPosition(newPosition);
+        rb.MovePosition(newPosition);
     }
 }
