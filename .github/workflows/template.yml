@@ -80,7 +80,7 @@ jobs:
        env:
          BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
          CHANNEL: HTML
-         ITCH_GAME: winter-melonjam
+         ITCH_GAME: overcharmed
          ITCH_USER: brainfartstudio
          BRANCH: itch-io
          PACKAGE: build/WebGL
