@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
         // Input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        // Normalize the movement vector to ensure consistent speed in all directions
+        movement.Normalize();
     }
 
     void FixedUpdate()
